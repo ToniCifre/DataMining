@@ -1,15 +1,6 @@
-MINERÍA DE DATOS (DATA MINING)
-================================
-Assignatura MinerÍa de Datos de la UPC
+# K-NN in python: search for the best k
 
-# Info:
-Per poder executar de manera correcta cadascuna de les sessions de laboratori, cal establir la carpeta de la sessió com 'source root' per poder llegir de manera correcta cadascuna de les dependencies.
-
-# Laboratori
-
-## K-NN in python: search for the best k
-
-### 1- Load the required modeules
+## 1- Load the required modeules
 
 
 ```python
@@ -22,7 +13,7 @@ import sklearn.neighbors as nb           # Per fer servir el knn
 %matplotlib inline                     
 ```
 
-### 2- Load the data
+## 2- Load the data
 
 
 ```python
@@ -58,11 +49,11 @@ plt.show()
 
 
     
-![png](Laboratori/KNN/README_files/README_5_0.png)
+![png](README_files/README_5_0.png)
     
 
 
-### 3- Simple cross-validation
+## 3- Simple cross-validation
 
 
 ```python
@@ -132,7 +123,7 @@ print(metrics.classification_report(y_test, y_pred))
     
     
 
-#### Let's build a one by hand to see prediction
+### Let's build a one by hand to see prediction
 
 
 ```python
@@ -151,7 +142,7 @@ plt.show()
 
 
     
-![png](Laboratori/KNN/README_files/README_11_0.png)
+![png](README_files/README_11_0.png)
     
 
 
@@ -164,7 +155,7 @@ print(knc.predict(one.reshape(1, 64)))
     [1]
     
 
-### 4- Let's do a 10-fold cross-validation
+## 4- Let's do a 10-fold cross-validation
 
 
 ```python
@@ -240,7 +231,7 @@ plt.show()
 
 
     
-![png](Laboratori/KNN/README_files/README_17_0.png)
+![png](README_files/README_17_0.png)
     
 
 
@@ -268,7 +259,7 @@ print(metrics.classification_report(y_test, y_pred))
     
     
 
-#### [Optional] Let's see how ammount of training data influences accuracy 
+### [Optional] Let's see how ammount of training data influences accuracy 
 
 
 ```python
@@ -319,11 +310,11 @@ plt.show()
 
 
     
-![png](Laboratori/KNN/README_files/README_20_0.png)
+![png](README_files/README_20_0.png)
     
 
 
-### 5- Finding parameters for k-NN
+## 5- Finding parameters for k-NN
 
 
 ```python
@@ -380,7 +371,7 @@ print("Accuracy 9 neighbour: and distance weighting:", np.mean(cv_scores))
     Accuracy 9 neighbour: and distance weighting: 0.9762014852347015
     
 
-#### Authomatically find best parameters:
+### Authomatically find best parameters:
 
 
 ```python
@@ -406,11 +397,11 @@ plt.show()
 
 
     
-![png](Laboratori/KNN/README_files/README_25_0.png)
+![png](README_files/README_25_0.png)
     
 
 
-#### Do the same using Grid Search method in python
+### Do the same using Grid Search method in python
 
 
 ```python
@@ -487,7 +478,7 @@ proportion_confint(count=epsilon*X_test.shape[0], nobs=X_test.shape[0], alpha=0.
 
 
 
-#### Mcnemar's Test implementation
+### Mcnemar's Test implementation
 
 
 ```python
@@ -516,7 +507,7 @@ print("Have the classifiers significant different accuracy?:",(np.abs(n01-n10)-1
     Have the classifiers significant different accuracy?: True
     
 
-#### Take a look to the errors in test set
+### Take a look to the errors in test set
 
 
 ```python
@@ -539,7 +530,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_35_2.png)
+![png](README_files/README_35_2.png)
     
 
 
@@ -548,7 +539,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_35_4.png)
+![png](README_files/README_35_4.png)
     
 
 
@@ -557,7 +548,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_35_6.png)
+![png](README_files/README_35_6.png)
     
 
 
@@ -566,7 +557,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_35_8.png)
+![png](README_files/README_35_8.png)
     
 
 
@@ -575,13 +566,13 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_35_10.png)
+![png](README_files/README_35_10.png)
     
 
 
-### Exercises:
+# Exercises:
 
-#### Do a 10-fold Cross-Validation using Naive Bayes
+### Do a 10-fold Cross-Validation using Naive Bayes
 
 
 ```python
@@ -639,7 +630,7 @@ proportion_confint(count=epsilon*X_test.shape[0], nobs=X_test.shape[0], alpha=0.
 
 
 
-#### Reproduce in Rapidminer
+### Reproduce in Rapidminer
 
 
 ```python
@@ -652,7 +643,7 @@ df.to_csv("digits2.csv",index=False)
 # Go to Rapidminer and load the data set. Reproduce grid Search there and report results on the test set
 ```
 
-#### Play with noise
+### Play with noise
 
 
 ```python
@@ -727,7 +718,7 @@ plt.show()
 
 
     
-![png](Laboratori/KNN/README_files/README_44_0.png)
+![png](README_files/README_44_0.png)
     
 
 
@@ -775,11 +766,11 @@ plt.show()
 
 
     
-![png](Laboratori/KNN/README_files/README_46_0.png)
+![png](README_files/README_46_0.png)
     
 
 
-#### Change the scorer function
+### Change the scorer function
 
 
 ```python
@@ -910,7 +901,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_50_2.png)
+![png](README_files/README_50_2.png)
     
 
 
@@ -919,7 +910,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_50_4.png)
+![png](README_files/README_50_4.png)
     
 
 
@@ -928,7 +919,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_50_6.png)
+![png](README_files/README_50_6.png)
     
 
 
@@ -937,7 +928,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_50_8.png)
+![png](README_files/README_50_8.png)
     
 
 
@@ -946,7 +937,7 @@ for i in testerrors:
 
 
     
-![png](Laboratori/KNN/README_files/README_50_10.png)
+![png](README_files/README_50_10.png)
     
 
 
