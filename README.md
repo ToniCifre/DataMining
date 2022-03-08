@@ -1,6 +1,7 @@
 DATA MINING (MINERÍA DE DATOS)
 ================================
 UPC Data Mining subject
+UPC data mining plus personally enhanced and added techniques
 
 # Run:
 For execute each of the laboratory sessions correctly, it is necessary to set the session folder as
